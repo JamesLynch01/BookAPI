@@ -30,6 +30,7 @@ namespace BookAPIpart1
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<BookContext>();
             services.AddScoped<IBooksService, BooksService>();
+            services.AddScoped<IAuthorService, AuthorService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

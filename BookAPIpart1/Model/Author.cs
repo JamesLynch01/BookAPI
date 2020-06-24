@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace BookAPIpart1.Model
 {
-    public class Book
+    public class Author
     {
         public int Id { get; set; }
-        [Required]
-        public string Title { get; set; }
-        [Required]
-        public string Author { get; set; }
-        [Required]
-        public string Category { get; set; }
 
-        public int AuthorId { get; internal set; }
+        [Required]
+        public string firstName { get; set; }
+        
+        [Required]
+        public string lastName { get; set; }
+        
+        [Required]
+        public DateTime birthday { get; set; }
+        
+        public List<Book> Books { get; set; }
     }
 }
